@@ -16,6 +16,12 @@
 #include <fstream>
 #include <Windows.h>
 
+#ifdef _DEBUG
+#pragma comment(lib,"cppunitd.lib")
+#else
+#pragma comment(lib,"cppunit.lib")
+#endif
+
 #include "cppunit/TextTestRunner.h"
 
 class CalculatorTestFixture : public CppUnit::TestFixture
